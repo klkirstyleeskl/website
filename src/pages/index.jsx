@@ -8,7 +8,8 @@ const MainPage = () => {
         <div>
             <h3>space_for_name</h3>
             <small>Main Page</small>
-            <Link to="/users">Poetry</Link>
+            <Link to="/poetry">Poetry</Link>
+            <Link to="/painting">Painting</Link>
         </div>     
     );
 }

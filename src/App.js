@@ -8,7 +8,8 @@ import {
 //Pages
 import MainPage from './pages';
 import Error from './pages/404';
-import PoetryPage from "./pages/poetryPage";
+import PoetryPage from './pages/poetryPage';
+import PaintingPage from './pages/paintingPage';
 
 
 
@@ -18,7 +19,8 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={MainPage} />
             <Route exact path="/404"component={Error} />
-            <Route exact path="/users"component={PoetryPage} />
+            <Route exact path="/poetry"component={PoetryPage} />
+            <Route exact path="/painting"component={PaintingPage} />
             <Redirect to="404"/>
           </Switch>
       </Router>
