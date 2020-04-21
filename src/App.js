@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { Component }from "react";
 import './App.css';
-import { BrouserRouter as Router, Route, Switch, Link, Redirect } from "react-router-dom"
+import { 
+  BrowserRouter as Router, 
+  Route, Switch, 
+  Link, Redirect } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-        <h1 className="title">Welcome to my website</h1>
-    </div>
-  );
+//Pages
+import MainPage from './pages';
+import Error from './pages/404';
+
+
+
+class App extends Component {
+  render() {
+      return <Router>
+          <Switch>
+            <Route exact path="/" component={MainPage} />
+            <Route component={Error} />
+          </Switch>
+      </Router>
+  }
 }
 
 export default App;
