@@ -8,6 +8,7 @@ import {
 //Pages
 import MainPage from './pages';
 import Error from './pages/404';
+import UsersPage from './pages/users';
 
 
 
@@ -16,7 +17,9 @@ class App extends Component {
       return <Router>
           <Switch>
             <Route exact path="/" component={MainPage} />
-            <Route component={Error} />
+            <Route exact path="/404"component={Error} />
+            <Route exact path="/users"component={UsersPage } />
+            <Redirect to="404"/>
           </Switch>
       </Router>
   }
